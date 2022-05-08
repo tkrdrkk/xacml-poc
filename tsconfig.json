@@ -14,8 +14,14 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "baseUrl": "src",
+    "paths": {
+      "@/*": [
+        "./*"
+      ]
+    }
   },
-  "include": ["src"],
+  "include": ["**/*.ts", "**/*.tsx"], // 参考: https://zenn.dev/k_u_0615/articles/34b7f7d4a79e52
   "references": [{ "path": "./tsconfig.node.json" }]
 }
